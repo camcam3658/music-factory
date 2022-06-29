@@ -3,9 +3,11 @@
 このアプリは無料で使えるBGMを取り扱っており、著作権フリーで誰でも使用できます。
 
 [使用技術]
-Ruby on Rails
+Ruby on Rails 6
+Ruby 2.7
 Docker
-AWS S3,ECR,Fragate
+HEROKU
+AWS S3
 circleci
 
 [目的]

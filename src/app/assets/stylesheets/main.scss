@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$gray-medium-light: #eaeaea;
+$gray-light: #777;
+$gray: #555;
+$gray-darker: #222;
+
 body {
   padding-top: 60px;
 }
@@ -38,7 +43,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: $gray;
 }
 
 p {
@@ -67,8 +72,8 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray;
 }
 
 /* forms */
@@ -103,16 +108,6 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
-}
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
 }
 
 // edit_pages
@@ -160,4 +155,44 @@ aside {
 
 .gravatar_edit {
   margin-top: 15px;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(172, 169, 169);
+  }
+}
+
+.users-name {
+  font-size: 18px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
 }

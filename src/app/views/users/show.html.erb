@@ -1,11 +1,13 @@
 <div class="row">
-<h1>プロフィール</h1>
   <aside class="col-md-4">
-  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-    <section class="user_info">
-      <h2>
-        <%= @user.name %>
-      </h2>
+  <section class="user_info">
+  <h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+  <% if @user == current_user %>
+  <%= link_to "プロフィールを編集", edit_user_path(current_user), class: "btn btn-outline-dark common-btn edit-profile-btn" %>
+  <% end %>
+  </h1>
     </section>
   </aside>
 </div>

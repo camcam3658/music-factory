@@ -1,0 +1,29 @@
+
+    <div class="col-md-8">
+      <div class="card-left">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-right">
+        <div class="card-right-comment">
+          <div class="card-right-name">
+            <%= link_to user_path(@post.user), class: "black-color no-text-decoration post-user-name",
+              title: @post.user.name do %>
+              <strong><%= @post.user.name %></strong>
+            <% end %>
+          </div>
+          <div class="m-2">
+            <strong>
+              <%= @post.caption %>
+            </strong>
+          </div>
+          <div class="comment-post-id">
+            <div class="m-2">
+            </div>
+          </div>
+        </div>
+        <div class="row parts">
+        </div>
+        <hr>
+      </div>
+    </div>

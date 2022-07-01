@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :songs, dependent: :destroy
-  accepts_nested_attributes_for :songs
+  has_one_attached :song
+  default_scope -> { order(created_at: :desc) }
 end

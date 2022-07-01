@@ -2,6 +2,8 @@
 <%= link_to gravatar_for(post.user, size: 50), post.user %>
   <span class="user"><%= link_to post.user.name, post.user %></span>
   <span class="content"><%= link_to post.caption, (post_path(post)) %></span>
+  <%= audio_tag url_for(post.song), controls: true %>
+
     <% if current_user?(post.user) %>
       <%= link_to "delete", post, method: :delete,
                                        data: { confirm: "You sure?" } %>

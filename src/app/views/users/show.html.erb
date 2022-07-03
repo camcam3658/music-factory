@@ -5,9 +5,9 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
   </h1>
-  <h2>
+  <section class="user-profile">
   <%= @user.profile %>
-  </h2>
+  </section>
   <p>
   <% if @user == current_user %>
   <div class="edit">

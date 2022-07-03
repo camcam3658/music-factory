@@ -90,6 +90,10 @@ p {
   text-decoration: none;
 }
 
+.About {
+  font-size: 2em;
+}
+
 /* footer */
 
 footer {
@@ -195,7 +199,7 @@ aside {
 }
 
 .edit {
-  padding-top: 65px;
+  padding-top: 30px;
   margin: 0 auto;
 }
 
@@ -276,6 +280,12 @@ span.image {
   }
 }
 
+.user-profile {
+  font-size: 18px;
+  white-space: pre-wrap;
+}
+
 .post-profile {
   border-top: 1px solid $gray-medium-light;
+  white-space: pre-wrap;
 }

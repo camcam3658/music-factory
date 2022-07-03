@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @user = User.find(params[:id])
     @post.song.attach(params[:post][:song])
     if @post.song.present?
       @post.save

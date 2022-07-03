@@ -1,11 +1,14 @@
 <li id="micropost-<%= post.id %>">
 <%= link_to gravatar_for(post.user, size: 50), post.user %>
-  <span class="user"><%= link_to post.user.name, post.user %></span>
-  <span class="content"><%= link_to post.caption, (post_path(post)) %></span>
+  <span class="user">作曲者: <%= link_to post.user.name, post.user %></span>
+  <span class="content">曲名: <%= link_to post.caption, (post_path(post)) %></span>
+  <div class="song">
   <%= audio_tag url_for(post.song), controls: true %>
+  <%= link_to "ダウンロード", (post.song) %>
 
     <% if current_user?(post.user) %>
-      <%= link_to "delete", post, method: :delete,
-                                       data: { confirm: "You sure?" } %>
+      <%= link_to "削除", post, method: :delete,
+                                       data: { confirm: "削除してもいいですか?" } %>
     <% end %>
+  </div>
 </li>

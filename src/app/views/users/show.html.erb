@@ -4,10 +4,17 @@
   <h1>
   <%= gravatar_for @user %>
   <%= @user.name %>
-  <% if @user == current_user %>
-  <%= link_to "プロフィールを編集", edit_user_path(current_user), class: "btn btn-outline-dark common-btn edit-profile-btn" %>
-  <% end %>
   </h1>
+  <h2>
+  <%= @user.profile %>
+  </h2>
+  <p>
+  <% if @user == current_user %>
+  <div class="edit">
+  <%= link_to "プロフィールを編集", edit_user_path(current_user), class: "btn btn-outline-dark common-btn edit-profile-btn" %>
+  </div>
+  <% end %>
+  </p>
     </section>
   </aside>
   <div class="col-md-8">

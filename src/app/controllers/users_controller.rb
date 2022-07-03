@@ -25,6 +25,7 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
 
     def edit
       @user = User.find(params[:id])
@@ -45,13 +46,12 @@ class UsersController < ApplicationController
       flash[:success] = "User deleted"
       redirect_to users_url
     end
-  end
 
     private
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation,:profile)
     end
 
 

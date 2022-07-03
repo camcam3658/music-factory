@@ -1,7 +1,9 @@
 <h1>楽曲登録</h1>
 <%= form_with(model: @post, local: true) do |f| %>
-  <%= f.label :タイトル %>
+  <%= f.label :caption, "タイトル" %>
   <%= f.text_field :caption %>
+  <%= f.label :profile, "曲紹介" %>
+  <%= f.text_area :profile %>
     <%= f.file_field :song, accept: "song/mp3,song/wav,song/mpeg" %>
   <%= f.submit "投稿", class: "btn btn-primary" %>
 <% end %>
